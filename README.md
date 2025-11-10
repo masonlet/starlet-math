@@ -1,4 +1,4 @@
-# StarletMath
+# Starlet Math
 A lightweight header-only math library for **Starlet** projects designed with OpenGL engines in mind.
 
 ⚠️ **Note**
@@ -24,9 +24,12 @@ This makes it perfect for learning, experimentation, but not a drop-in replaceme
 ```cmake
 include(FetchContent)
 
-FetchContent_Declare(StarletMath GIT_REPOSITORY https://github.com/Masonlet/StarletMath.git GIT_TAG main)
-FetchContent_MakeAvailable(StarletMath)
+FetchContent_Declare(starlet_math
+  GIT_REPOSITORY https://github.com/masonlet/starlet-math.git 
+  GIT_TAG main
+)
+FetchContent_MakeAvailable(starlet_math)
 
-target_link_libraries(YourAppName PRIVATE StarletMath)
+target_link_libraries(app_name PRIVATE starlet_math)
 ```
 
