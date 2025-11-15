@@ -1,6 +1,6 @@
 # Starlet Math
 
-![Tests](https://github.com/masonlet/starlet-math/actions/workflows/test.yml/badge.svg)
+[![Tests](https://github.com/masonlet/starlet-math/actions/workflows/tests.yml/badge.svg)](https://github.com/masonlet/starlet-math/actions/workflows/tests.yml)
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/std/the-standard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
