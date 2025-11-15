@@ -1,5 +1,10 @@
 # Starlet Math
-A lightweight header-only math library for **Starlet** projects designed with OpenGL engines in mind.
+
+![Tests](https://github.com/masonlet/starlet-math/actions/workflows/test.yml/badge.svg)
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/std/the-standard)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+A lightweight header-only math library for **Starlet** projects.
 
 ⚠️ **Note**
 This is **NOT** intended to be a complete math library!
@@ -19,8 +24,15 @@ This makes it perfect for learning, experimentation, but not a drop-in replaceme
     `pi`, `radians()`, `degrees()`
 - **Starlet** Project Constants
 
-## Using as a Dependency
 
+<br/>
+
+
+## Prerequisites
+- C++20 or later
+- CMake 3.20+
+
+## Using as a Dependency
 ```cmake
 include(FetchContent)
 
@@ -33,3 +45,25 @@ FetchContent_MakeAvailable(starlet_math)
 target_link_libraries(app_name PRIVATE starlet_math)
 ```
 
+<br/>
+
+## Building and Testing
+```bash
+# 1. Clone starlet-math
+git clone https://github.com/masonlet/starlet-math.git
+cd starlet-math
+
+# 2. Create a Build Directory and Generate Build Files
+mkdir build
+cd build
+cmake -DBUILD_TESTS=ON ..
+
+# 3. Build and run tests
+cmake --build .
+ctest
+```
+
+<br/>
+
+## License
+MIT License — see [LICENSE](./LICENSE) for details.
