@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(starlet_math VERSION 1.0.0)
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 set(PROJECT_INC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/inc")
 
 if(NOT TARGET ${PROJECT_NAME})
@@ -33,6 +35,12 @@ if(BUILD_TESTS)
 
   # For Windows: Prevent overriding the parent project's compiler/linker settings
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
   FetchContent_MakeAvailable(googletest)
+
+  set_target_properties(gtest gtest_main gmock gmock_main PROPERTIES
+    FOLDER "Tests/GoogleTest"
+  )
+
   add_subdirectory(tests)
 endif()
