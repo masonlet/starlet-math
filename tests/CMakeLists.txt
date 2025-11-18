@@ -10,5 +10,9 @@ target_link_libraries(${PROJECT_NAME}_tests
     GTest::gtest_main
 )
 
+set_target_properties(${PROJECT_NAME}_tests PROPERTIES
+  FOLDER "Tests/Math"
+)
+
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}_tests)
